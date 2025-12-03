@@ -1,4 +1,4 @@
-package day1
+package day2
 
 import "core:fmt"
 import "core:os"
@@ -75,7 +75,7 @@ count_invalid_numbers_2 :: proc(start, end: int) -> i64 {
 count_invalid_numbers :: proc(start, end: int) -> i64 {
 	invalid_count: i64 = 0
 	for num in start ..= end {
-		digits := digits(num)
+		digits := count_digits(num)
 		if digits % 2 != 0 do continue
 
 		first_half, second_half: int
@@ -101,7 +101,7 @@ count_invalid_numbers :: proc(start, end: int) -> i64 {
 	return invalid_count
 }
 
-digits :: proc(n: int) -> int {
+count_digits :: proc(n: int) -> int {
 	digits := 1
 	base :: 10
 	for power := 1; n / power >= base; power *= base {

@@ -1,19 +1,32 @@
 [
   {
+    "label": "Test $ZED_RELATIVE_DIR 1",
+    "command": "odin run $ZED_RELATIVE_DIR -keep-executable -strict-style -vet -debug --", // -o:speed 
+    "args": [
+      "input/$ZED_RELATIVE_DIR-test.txt",
+      "1"
+    ]
+  },
+  {
+    "label": "Test $ZED_RELATIVE_DIR 2",
+    "command": "odin run $ZED_RELATIVE_DIR -keep-executable -strict-style -vet -debug --", // -o:speed -debug
+    "args": [
+      "input/$ZED_RELATIVE_DIR-test.txt",
+      "2"
+    ]
+  },  {
     "label": "Run $ZED_RELATIVE_DIR 1",
-    "command": "odin run $ZED_RELATIVE_DIR -keep-executable -strict-style -vet --", // -o:speed -debug
+    "command": "odin run $ZED_RELATIVE_DIR -keep-executable -strict-style -vet -debug --", // -o:speed 
     "args": [
       "input/$ZED_RELATIVE_DIR.txt",
-      //"input/$ZED_RELATIVE_DIR-test.txt",
       "1"
     ]
   },
   {
     "label": "Run $ZED_RELATIVE_DIR 2",
-    "command": "odin run $ZED_RELATIVE_DIR -keep-executable -strict-style -vet --", // -o:speed -debug
+    "command": "odin run $ZED_RELATIVE_DIR -keep-executable -strict-style -vet -debug --", // -o:speed -debug
     "args": [
       "input/$ZED_RELATIVE_DIR.txt",
-      //"input/$ZED_RELATIVE_DIR-test.txt",
       "2"
     ]
   }
